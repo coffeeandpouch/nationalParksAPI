@@ -17,7 +17,7 @@ function displayResults(responseJson) {
   //iterate through the items array
   for (let i = 0; i < responseJson.data.length; i++) {
     //for each park in the items array, add a list item to the results list
-    //with  the park code, state code, and full name
+    //with  the park full name, description, and url
     $("#results-list").append(
       `<li><h3>${responseJson.data[i].fullName}</h3>
         <p>${responseJson.data[i].description}</p>
