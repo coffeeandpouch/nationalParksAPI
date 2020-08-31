@@ -13,7 +13,7 @@ function formatQueryParams(params) {
 function displayResults(responseJson) {
   //if there are previous results, remove them
   console.log(responseJson);
-  $("reults-list").empty();
+  $("#results-list").empty();
   //iterate through the items array
   for (let i = 0; i < responseJson.data.length; i++) {
     //for each park in the items array, add a list item to the results list
@@ -21,7 +21,7 @@ function displayResults(responseJson) {
     $("#results-list").append(
       `<li><h3>${responseJson.data[i].fullName}</h3>
         <p>${responseJson.data[i].description}</p>
-        <p>${responseJson.data[i].url}</p>
+        <p>${responseJson.data[i].url}</p></a>
         </li>`
     );
   }
