@@ -29,7 +29,7 @@ function displayResults(responseJson) {
   $("#results").removeClass("hidden");
 }
 
-function getParks(query, maxResults) {
+function getParks(query, maxResults=10) {
   const params = {
     api_key: apiKey,
     // parkCode: query,
