@@ -29,12 +29,12 @@ function displayResults(responseJson) {
   $("#results").removeClass("hidden");
 }
 
-function getParks(query, maxResults=10) {
+function getParks(query, limit) {
   const params = {
     api_key: apiKey,
     // parkCode: query,
     stateCode: query,
-    maxResults,
+    limit
   };
   const stateParksQuery = query.reduce(
     (finalQuery, park) => finalQuery + "statePark=" + park + "&",
