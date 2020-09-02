@@ -21,7 +21,7 @@ function displayResults(responseJson) {
     $("#results-list").append(
       `<li><h3>${responseJson.data[i].fullName}</h3>
         <p>${responseJson.data[i].description}</p>
-        <p>${responseJson.data[i].url}</p>
+       <a href="${responseJson.data[i].url}" target="_blank">${responseJson.data[i].url}</a>
         </li>`
     );
   }
@@ -34,7 +34,7 @@ function getParks(query, limit) {
     api_key: apiKey,
     // parkCode: query,
     stateCode: query,
-    limit
+    limit,
   };
   const stateParksQuery = query.reduce(
     (finalQuery, park) => finalQuery + "statePark=" + park + "&",
