@@ -61,8 +61,8 @@ function getParks(query, limit) {
 //         event.stopPropogation();
         
 
-    }
-}
+    
+
 function watchForm() {
   $("form").submit((event) => {
     event.preventDefault();
